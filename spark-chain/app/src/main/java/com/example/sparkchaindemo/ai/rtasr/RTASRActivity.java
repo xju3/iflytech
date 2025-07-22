@@ -230,7 +230,7 @@ public class RTASRActivity extends AppCompatActivity implements View.OnClickList
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        btn_audio_start.setText("麦克风识别");
+                        btn_audio_start.setText("麦克风识别"+code);
                         btn_audio_start.setEnabled(true);
                         btn_file_start.setEnabled(true);
                     }
@@ -361,14 +361,14 @@ public class RTASRActivity extends AppCompatActivity implements View.OnClickList
             mRTASR.registerCallbacks(mRtAsrCallbacks);//注册监听回调
         }
 
-        mRTASR.transType("normal");//普通翻译
-        mRTASR.transStrategy(2);//策略2：返回中间过程中的结果。其他策略参考集成文档
+        // mRTASR.transType("normal");//普通翻译
+        // mRTASR.transStrategy(2);//策略2：返回中间过程中的结果。其他策略参考集成文档
         if(mode == ASRMode.CN){
             mRTASR.lang("cn");//转写语种 cn:中文,en:英文。其他语种参考集成文档
-            mRTASR.targetLang("en");//翻译语种 cn:中文,en:英文。其他语种参考集成文档
+            // mRTASR.targetLang("en");//翻译语种 cn:中文,en:英文。其他语种参考集成文档
         }else{
             mRTASR.lang("en");//转写语种 cn:中文,en:英文。其他语种参考集成文档
-            mRTASR.targetLang("cn");//翻译语种 cn:中文,en:英文。其他语种参考集成文档
+            // mRTASR.targetLang("cn");//翻译语种 cn:中文,en:英文。其他语种参考集成文档
         }
 
 

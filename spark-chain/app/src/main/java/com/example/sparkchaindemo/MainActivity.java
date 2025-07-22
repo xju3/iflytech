@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView(){
         btn_ai = findViewById(R.id.main_ai);
         btn_llm = findViewById(R.id.main_llm);
-
+        btn_llm.setVisibility(View.INVISIBLE);
         btn_ai.setOnClickListener(this);
         btn_llm.setOnClickListener(this);
     }
